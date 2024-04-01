@@ -10,6 +10,7 @@ class LoginPage extends StatelessWidget {
       body: Container(
         margin: const EdgeInsets.all(24),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [_header(context), _inputField(context), _signup(context)],
         ),
       ),
@@ -31,6 +32,7 @@ _header(context) {
 
 _inputField(context) {
   return Column(
+    crossAxisAlignment: CrossAxisAlignment.stretch,
     children: [
       TextField(
         decoration: InputDecoration(
@@ -55,6 +57,7 @@ _inputField(context) {
               borderSide: BorderSide.none),
           filled: true,
           fillColor: Colors.deepPurple.withOpacity(0.1),
+          prefixIcon: const Icon(Icons.password)
         ),
       ),
       const SizedBox(
@@ -68,7 +71,7 @@ _inputField(context) {
         onPressed: () {},
         child: const Text(
           "Login",
-          style: TextStyle(fontSize: 20),
+          style: TextStyle(fontSize: 20,color: Colors.white),
         ),
       ),
     ],
@@ -77,8 +80,9 @@ _inputField(context) {
 
 _signup(context) {
   return Row(
+    mainAxisAlignment: MainAxisAlignment.center,
     children: [
-      const Text("ont have an account ,"),
+      const Text("Dont have an account ,"),
       TextButton(
         onPressed: () {},
         child: const Text(
